@@ -7,7 +7,9 @@
             href="@{'/public/stylesheets/main.css'}" />
         <link rel="shortcut icon" type="image/png" 
             href="@{'/public/images/favicon.png'}" />
-    </head>
+    	<script src="@{'/public/javascripts/jquery-1.5.2.min.js'}"></script>
+	    <script src="@{'/public/javascripts/jquery.tools.min.js'}"></script>
+	</head>
     <body>
         
         <div id="header">
@@ -20,10 +22,10 @@
                 </li>
             </ul>
             <div id="title">
-                <span class="about">About this blog</span>
-                <h1><a href="#">${blogTitle}</a></h1>
-                <h2>${blogBaseline}</h2>
-            </div>
+			    <span class="about">About this blog</span>
+			    <h1><a href="@{Application.index()}">${blogTitle}</a></h1>
+			    <h2>${blogBaseline}</h2>
+			</div>
         </div>
         
         <div id="main">
