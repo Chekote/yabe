@@ -1,5 +1,17 @@
 # Test data
 
+Tag(play):
+    name:           Play
+
+Tag(architecture):
+    name:           Architecture
+
+Tag(test):
+    name:           Test
+
+Tag(mvc):
+    name:           MVC
+
 User(bob):
     email:          bob@gmail.com
     password:       secret
@@ -37,6 +49,10 @@ Post(jeffPost):
     title:          The MVC application
     postedAt:       2009-06-06
     author:         jeff
+    tags:           
+                    - play
+                    - architecture
+                    - mvc
     content:        >
                     A Play! application follows the MVC architectural pattern as applied to the 
                     architecture of the Web.
