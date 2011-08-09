@@ -7,7 +7,7 @@ GET     /                                       Application.index
 GET     /app/posts/{<[0-9]+>id}                 Application.show
 POST    /app/posts/{postId}/comments            Application.postComment
 GET     /captcha                                Application.captcha
-GET     /app/posts/{tag}                    	Application.listTagged
+GET     /app/posts/{tag}                    	  Application.listTagged
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
@@ -21,6 +21,11 @@ GET     /public/                                staticDir:public
 # Import CRUD routes
 GET     /admin/?                                Admin.index
 *       /admin                                  module:crud
+
+GET     /admin/myPosts/{id}                     Admin.form
+GET     /admin/new                              Admin.form
+POST    /admin/myPosts/{id}                  Admin.save
+POST    /admin/new                          Admin.save
 
 # Import Secure routes
 *       /                                       module:secure
